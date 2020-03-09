@@ -30,8 +30,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="#">
-            <span class="navbar-brand-full">{{ trans('panel.site_title') }}</span>
-            <span class="navbar-brand-minimized">{{ trans('panel.site_title') }}</span>
+            <span class="navbar-brand-full">Service Provider</span>
+            <span class="navbar-brand-minimized">Service Provider</span>
         </a>
         <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
             <span class="navbar-toggler-icon"></span>
@@ -98,8 +98,8 @@
     <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.print.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.colVis.min.js"></script>
-    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
-    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <!-- <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script> -->
+    <!-- <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script> -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
     <script src="https://cdn.datatables.net/select/1.3.0/js/dataTables.select.min.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
@@ -111,9 +111,9 @@
     <script>
         $(function() {
   let copyButtonTrans = '{{ trans('global.datatables.copy') }}'
-  let csvButtonTrans = '{{ trans('global.datatables.csv') }}'
-  let excelButtonTrans = '{{ trans('global.datatables.excel') }}'
-  let pdfButtonTrans = '{{ trans('global.datatables.pdf') }}'
+  // let csvButtonTrans = '{{ trans('global.datatables.csv') }}'
+  // let excelButtonTrans = '{{ trans('global.datatables.excel') }}'
+  // let pdfButtonTrans = '{{ trans('global.datatables.pdf') }}'
   let printButtonTrans = '{{ trans('global.datatables.print') }}'
   let colvisButtonTrans = '{{ trans('global.datatables.colvis') }}'
 
@@ -153,25 +153,25 @@
         }
       },
       {
-        extend: 'csv',
+        extend: '',
         className: 'btn-default',
-        text: csvButtonTrans,
+        // text: csvButtonTrans,
         exportOptions: {
           columns: ':visible'
         }
       },
       {
-        extend: 'excel',
+        // extend: 'excel',
         className: 'btn-default',
-        text: excelButtonTrans,
+        // text: excelButtonTrans,
         exportOptions: {
           columns: ':visible'
         }
       },
       {
-        extend: 'pdf',
+        // extend: 'pdf',
         className: 'btn-default',
-        text: pdfButtonTrans,
+        // text: pdfButtonTrans,
         exportOptions: {
           columns: ':visible'
         }

@@ -2,8 +2,8 @@
 
 return [
     'userManagement' => [
-        'title'          => 'User management',
-        'title_singular' => 'User management',
+        'title'          => 'Service provider',
+        'title_singular' => 'Service provider',
     ],
     'permission'     => [
         'title'          => 'Permissions',
@@ -84,8 +84,8 @@ return [
         ],
     ],
     'employee'       => [
-        'title'          => 'Employees',
-        'title_singular' => 'Employee',
+        'title'          => 'Therapist',
+        'title_singular' => 'Therapist',
         'fields'         => [
             'id'                => 'ID',
             'id_helper'         => '',
@@ -128,14 +128,14 @@ return [
         ],
     ],
     'appointment'    => [
-        'title'          => 'Appointments',
+        'title'          => 'Therapist Schedule',
         'title_singular' => 'Appointment',
         'fields'         => [
             'id'                 => 'ID',
             'id_helper'          => '',
             'client'             => 'Client',
             'client_helper'      => '',
-            'employee'           => 'Employee',
+            'employee'           => 'Therapist',
             'employee_helper'    => '',
             'start_time'         => 'Start Time',
             'start_time_helper'  => '',

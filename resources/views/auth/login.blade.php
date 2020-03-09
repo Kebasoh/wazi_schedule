@@ -1,5 +1,9 @@
 @extends('layouts.app')
 @section('content')
+<div class="wazilogo" style="margin-left:45%; margin-bottom:10%;">
+    <img src="{{ URL::asset('images/logo.png') }}" width="150px">
+
+</div>
 <div class="row justify-content-center">
     <div class="col-md-8">
         <div class="card-group">
@@ -12,7 +16,10 @@
                     @endif
                     <form method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
-                        <h1>{{ trans('panel.site_title') }}</h1>
+                        <div class="container text-center">
+
+                            <h1>Wazi Service Profiders</h1>
+                        </div>
                         <p class="text-muted">{{ trans('global.login') }}</p>
 
                         <div class="input-group mb-3">
