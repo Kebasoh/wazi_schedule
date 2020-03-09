@@ -1,4 +1,4 @@
-# Laravel 6 Appointments System demo
+# Employees Appointments System 
 
 Simple project to manage appointments for companies like beauty salon, medical clinic or car repair shop.
 
