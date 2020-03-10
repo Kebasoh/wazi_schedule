@@ -24,14 +24,16 @@
     @yield('styles')
 </head>
 
-<body class="app header-fixed sidebar-fixed aside-menu-fixed pace-done sidebar-lg-show">
+<body class="app header-fixed sidebar-fixed aside-menu-fixed pace-done sidebar-lg-show" style="#ededed">
     <header class="app-header navbar">
         <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="#">
-            <span class="navbar-brand-full">Service Provider</span>
-            <span class="navbar-brand-minimized">Service Provider</span>
+        <div class="wazilogo">
+    <img src="{{ URL::asset('images/logo.png') }}" width="50px">
+
+</div>
         </a>
         <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
             <span class="navbar-toggler-icon"></span>

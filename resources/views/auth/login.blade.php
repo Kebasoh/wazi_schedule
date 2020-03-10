@@ -16,7 +16,7 @@
                     @endif
                     <form method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
-                        <div class="container text-center">
+                        <div class="container text-center" style="color:#1babcc;">
 
                             <h1>Wazi Service Providers</h1>
                         </div>

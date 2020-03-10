@@ -70,6 +70,20 @@ table.dataTable thead .sorting_desc {
     border-color: #f0f3f5;
 }
 
+.sidebar .nav-link.active {
+    color: #fff;
+    background: #fd6c21 !important;
+}
+
+.sidebar .nav-link .nav-icon {
+    display: inline-block;
+    width: 1.09375rem;
+    margin: 0 .5rem 0 0;
+    font-size: .875rem;
+    color: #23282c !important;
+    text-align: center;
+}
+
 .btn-default.focus,
 .btn-default:focus {
     box-shadow: 0 0 0 .2rem rgba(209, 213, 215, .5);
@@ -105,8 +119,5 @@ table.dataTable thead .sorting_desc {
 .select2-results__option {
     padding-left: 0px;
     padding-right: 0px;
-}
-#wazilogo{
-    background-color: cornflowerblue;
 }
 
