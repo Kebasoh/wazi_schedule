@@ -18,7 +18,7 @@
                         {{ csrf_field() }}
                         <div class="container text-center">
 
-                            <h1>Wazi Service Profiders</h1>
+                            <h1>Wazi Service Providers</h1>
                         </div>
                         <p class="text-muted">{{ trans('global.login') }}</p>
 

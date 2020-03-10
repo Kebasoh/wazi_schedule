@@ -4,9 +4,6 @@ Simple project to manage appointments for companies like beauty salon, medical c
 
 You can manage your Services, Employees, Clients and Appointments, viewing them in a calendar.
 
-![Laravel Appointments calendar](https://laraveldaily.com/wp-content/uploads/2019/09/laravel-appointments-calendar.png)
-
-![Laravel Appointments form](https://laraveldaily.com/wp-content/uploads/2019/09/laravel-appointments-form.png)
 
 ---
 
