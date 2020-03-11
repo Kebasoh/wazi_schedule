@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
 .ck-editor__editable,
 textarea {
     min-height: 150px;
@@ -121,3 +123,17 @@ table.dataTable thead .sorting_desc {
     padding-right: 0px;
 }
 
+#wazit{
+font-size: 50px;}
+
+
+#one{
+color: #fd6c21;
+}
+#two{
+    margin-top: 100px;
+}
+.gif{
+  width: 370px;
+  height: auto;
+}

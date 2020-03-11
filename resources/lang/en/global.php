@@ -54,7 +54,7 @@ return [
         'copy'          => 'Copy',
         // 'csv'           => 'CSV',
         // 'excel'         => 'Excel',
-        // 'pdf'           => 'PDF',
+        'pdf'           => 'PDF',
         'print'         => 'Print',
         'colvis'        => 'Column visibility',
         'delete'        => 'Delete selected',
