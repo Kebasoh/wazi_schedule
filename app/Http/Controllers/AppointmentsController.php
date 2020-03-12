@@ -7,7 +7,7 @@ class AppointmentsController extends Controller
 {
     public function showAllAppointments()
     {
-        // $appointments = Appointment::with('Employee')->get();
+        $appointments = Appointment::with('Employee')->get();
         return response()->json(Appointment::all());
     }
     public function showOneAppointment($id)
@@ -17,7 +17,7 @@ class AppointmentsController extends Controller
     public function create(Request $request)
     {
         $appointments = Appointment::create($request->all());
-        //return csrf_token();
+        return csrf_token();
         return response()->json($appointments, 201);
     }
     public function update(Request $request, $id)
