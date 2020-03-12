@@ -18,6 +18,9 @@ class AppointmentsApiController extends Controller
         abort_if(Gate::denies('appointment_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         return new AppointmentResource(Appointment::with(['client', 'employee', 'services'])->get());
+    
+    
+        return response()->json(Appointments::all());
     }
 
     public function store(StoreAppointmentRequest $request)
