@@ -20,7 +20,7 @@ class AppointmentsApiController extends Controller
         return new AppointmentResource(Appointment::with(['client', 'employee', 'services'])->get());
     
     
-        return response()->json(Appointments::all());
+        // return response()->json(Appointments::all());
     }
 
     public function store(StoreAppointmentRequest $request)

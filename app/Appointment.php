@@ -3,7 +3,7 @@
 namespace App;
 
 use Carbon\Carbon;
-use App\Employee;
+// use App\Employee;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -40,7 +40,7 @@ class Appointment extends Model
 
     public function employee()
     {
-        return $this->belongsTo('Employee');
+        return $this->belongsTo(Employee::class, 'employee_id');
     }
 
     public function getStartTimeAttribute($value)
