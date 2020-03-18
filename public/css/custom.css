@@ -134,6 +134,12 @@ color: #fd6c21;
     margin-top: 100px;
 }
 .gif{
-  width: 370px;
+  max-width: 100%;
   height: auto;
+  width: auto\9;
+}
+
+.here{
+    padding-top:150px;
+
 }
