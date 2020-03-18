@@ -38,26 +38,26 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
 });
 
-// $router->group(['prefix' => 'api'], function () use ($router) {
-//     Route::get('appointment', 'AppointmentsController@showAllAppointments');
-//     Route::get('appointment/{appointment}', 'AppointmentsController@showOneAppointment');
-//     Route::post('appointment', 'AppointmentsController@create');
-//     Route::put('appointment/{appointment}', 'AppointmentsController@update');
-//     Route::delete('appointment/{appointment}', 'AppointmentsController@delete');
+$router->group(['prefix' => 'api'], function () use ($router) {
+        Route::get('appointment', 'AppointmentsController@showAllAppointments');
+        Route::get('appointment/{appointment}', 'AppointmentsController@showOneAppointment');
+        Route::post('appointment', 'AppointmentsController@create');
+        Route::put('appointment/{appointment}', 'AppointmentsController@update');
+        Route::delete('appointment/{appointment}', 'AppointmentsController@delete');
 
 
-//     Route::get('client', 'ClientController@showAllClients');
-//     Route::get('client/{client}', 'ClientController@show');
-//     Route::post('client', 'ClientController@store');
-//     Route::put('client/{client}', 'ClientController@update');
-//     Route::delete('client/{client}', 'ClientController@delete');
-//     Route::post('register/{client}', 'Auth\RegisterController@register');
+        Route::get('client', 'ClientController@showAllClients');
+        Route::get('client/{client}', 'ClientController@show');
+        Route::post('client', 'ClientController@store');
+        Route::put('client/{client}', 'ClientController@update');
+        Route::delete('client/{client}', 'ClientController@delete');
 
 
-//     Route::get('employee', 'EmployeeController@showAllEmployees');
-//     Route::get('employee/{employee}', 'EmployeeController@show');
-//     Route::post('employee', 'EmployeeController@store');
-//     Route::put('employee/{employee}', 'EmployeeController@update');
-//     Route::delete('employee/{employee}', 'EmployeeController@delete');
-//     Route::post('register/{employee}', 'Auth\RegisterController@register');
-//   });
+
+        Route::get('employee', 'EmployeeController@showAllEmployees');
+        Route::get('employee/{employee}', 'EmployeeController@show');
+        Route::post('employee', 'EmployeeController@store');
+        Route::put('employee/{employee}', 'EmployeeController@update');
+        Route::delete('employee/{employee}', 'EmployeeController@delete');
+
+});
