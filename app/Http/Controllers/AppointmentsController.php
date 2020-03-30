@@ -3,6 +3,8 @@ namespace App\Http\Controllers;
 use App\Appointment;
 use APP\Employee;
 use Illuminate\Http\Request;
+
+
 class AppointmentsController extends Controller
 {
     public function showAllAppointments()
