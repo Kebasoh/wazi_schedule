@@ -65,7 +65,7 @@
             @can('employee_access')
                 <li class="nav-item">
                     <a href="{{ route("admin.employees.index") }}" class="nav-link {{ request()->is('admin/employees') || request()->is('admin/employees/*') ? 'active' : '' }}">
-                        <i class="fa-fw fas fa-cogs nav-icon">
+                        <i class="fa fa-user nav-icon">
 
                         </i>
                         {{ trans('cruds.employee.title') }}
@@ -75,7 +75,7 @@
             @can('client_access')
                 <li class="nav-item">
                     <a href="{{ route("admin.clients.index") }}" class="nav-link {{ request()->is('admin/clients') || request()->is('admin/clients/*') ? 'active' : '' }}">
-                        <i class="fa-fw fas fa-cogs nav-icon">
+                        <i class="fa fa-address-book nav-icon">
 
                         </i>
                         {{ trans('cruds.client.title') }}
@@ -85,7 +85,7 @@
             @can('appointment_access')
                 <li class="nav-item">
                     <a href="{{ route("admin.appointments.index") }}" class="nav-link {{ request()->is('admin/appointments') || request()->is('admin/appointments/*') ? 'active' : '' }}">
-                        <i class="fa-fw fas fa-cogs nav-icon">
+                        <i class="fa fa-clock-o nav-icon">
 
                         </i>
                         {{ trans('cruds.appointment.title') }}

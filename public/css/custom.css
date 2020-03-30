@@ -140,6 +140,38 @@ color: #fd6c21;
 }
 
 .here{
-    padding-top:150px;
+    text-align: center;
+}
+.here > .child{
+        /*line-height: 200px;*/
+}
+
+.parent {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+}
+
+.img{
+width: 50%;
+}
+
+.me{
+     display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.end{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.last{
+margin-top: 100px;
+}
+.second{
+margin-top: 100px;
 
 }
