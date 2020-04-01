@@ -1,33 +1,33 @@
 <?php
 namespace App\Http\Controllers;
-use App\Services;
+use App\Service;
 use Illuminate\Http\Request;
 
 class ServicesController extends Controller
 {
     public function showAllServices()
     {
-        return response()->json(Services::all());
+        return response()->json(Service::all());
     }
-    public function showOneEmployee($id)
+    public function showOneService($id)
     {
-        return response()->json(Services::find($id));;
+        return response()->json(Service::find($id));;
     }
     public function create(Request $request)
     {
-        $services = Services::create($request->all());
+        $service = Service::create($request->all());
         //return csrf_token();
-        return response()->json($services);
+        return response()->json($service);
     }
     public function update(Request $request, $id)
     {
-        $services = Services::findOrFail($id);
-        $services->update($request->all());
-        return response()->json(['message' => 'Success! services updated', $services, 200]);
+        $service = Service::findOrFail($id);
+        $service->update($request->all());
+        return response()->json(['message' => 'Success! services updated', $service, 200]);
     }
-    public function delete( Services $services)
+    public function delete( Services $service)
     {
-        Services::findOrFail($id)->delete();
+        Service::findOrFail($id)->delete();
         return response()->json(['message' => 'Delete success']);
     }
 }
