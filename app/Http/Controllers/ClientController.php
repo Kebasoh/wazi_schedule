@@ -31,7 +31,7 @@ class clientController extends Controller
     {
         $client = Client::create($request->all());
 
-        return response()->json($Client, 201);
+        return response()->json($Client);
     }
 
     public function update(Request $request, $id)

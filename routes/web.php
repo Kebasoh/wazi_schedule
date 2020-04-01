@@ -38,7 +38,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
 });
 
-$router->group(['prefix' => 'api'], function () use ($router) {
+$router->group(['prefix' => 'api/'], function () use ($router) {
+    
         Route::get('appointment', 'AppointmentsController@showAllAppointments');
         Route::get('appointment/{appointment}', 'AppointmentsController@showOneAppointment');
         Route::post('appointment', 'AppointmentsController@create');
