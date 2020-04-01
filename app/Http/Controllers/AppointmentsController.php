@@ -3,6 +3,8 @@ namespace App\Http\Controllers;
 use App\Appointment;
 use APP\Employee;
 use Illuminate\Http\Request;
+
+
 class AppointmentsController extends Controller
 {
     public function showAllAppointments()
@@ -17,8 +19,8 @@ class AppointmentsController extends Controller
     public function create(Request $request)
     {
         $appointments = Appointment::create($request->all());
-        return csrf_token();
-        return response()->json($appointments, 201);
+       
+        return response()->json($appointments);
     }
     public function update(Request $request, $id)
     {

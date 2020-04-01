@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Client;
 use Illuminate\Http\Request;
+
 // use Illuminate\Database\Eloquent\Model;
 
 // class client extends Model
@@ -30,7 +31,7 @@ class clientController extends Controller
     {
         $client = Client::create($request->all());
 
-        return response()->json($Client, 201);
+        return response()->json($Client);
     }
 
     public function update(Request $request, $id)

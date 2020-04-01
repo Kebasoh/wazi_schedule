@@ -38,7 +38,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
 });
 
-$router->group(['prefix' => 'api'], function () use ($router) {
+$router->group(['prefix' => 'wazi.com/'], function () use ($router) {
+    
         Route::get('appointment', 'AppointmentsController@showAllAppointments');
         Route::get('appointment/{appointment}', 'AppointmentsController@showOneAppointment');
         Route::post('appointment', 'AppointmentsController@create');
@@ -47,7 +48,7 @@ $router->group(['prefix' => 'api'], function () use ($router) {
 
 
         Route::get('client', 'ClientController@showAllClients');
-        Route::get('client/{client}', 'ClientController@show');
+        Route::get('client/{client}', 'ClientController@showOneClient');
         Route::post('client', 'ClientController@store');
         Route::put('client/{client}', 'ClientController@update');
         Route::delete('client/{client}', 'ClientController@delete');
@@ -55,9 +56,21 @@ $router->group(['prefix' => 'api'], function () use ($router) {
 
 
         Route::get('employee', 'EmployeeController@showAllEmployees');
-        Route::get('employee/{employee}', 'EmployeeController@show');
+        Route::get('employee/{employee}', 'EmployeeController@showOneEmployee');
         Route::post('employee', 'EmployeeController@store');
         Route::put('employee/{employee}', 'EmployeeController@update');
         Route::delete('employee/{employee}', 'EmployeeController@delete');
+
+        Route::get('services', 'ServicesController@showAllServices');
+        Route::get('services/{services}', 'ServicesController@showOneService');
+        Route::post('services', 'ServicesController@store');
+        Route::put('services/{services}', 'ServicesController@update');
+        Route::delete('services/{services}', 'ServicesController@delete');
+
+        Route::get('availability', 'AvailabilityController@showAllAvailabilities');
+        Route::get('availability/{availability}', 'AvailabilityController@showOneAbility');
+        Route::post('availability', 'AvailabilitiesController@store');
+        Route::put('availability/{availability}', 'AvailabilityController@update');
+        Route::delete('availability/{availability}', 'AvailabilityController@delete');
 
 });
