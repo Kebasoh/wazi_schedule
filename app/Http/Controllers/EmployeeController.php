@@ -16,7 +16,7 @@ class EmployeeController extends Controller
     public function create(Request $request)
     {
         $employee = Employee::create($request->all());
-        //return csrf_token();
+        
         return response()->json($employee);
     }
     public function update(Request $request, $id)

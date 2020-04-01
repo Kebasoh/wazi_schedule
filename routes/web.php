@@ -67,4 +67,10 @@ $router->group(['prefix' => 'wazi.com/'], function () use ($router) {
         Route::put('services/{services}', 'ServicesController@update');
         Route::delete('services/{services}', 'ServicesController@delete');
 
+        Route::get('availability', 'AvailabilityController@showAllAvailabilities');
+        Route::get('availability/{availability}', 'AvailabilityController@showOneAbility');
+        Route::post('availability', 'AvailabilitiesController@store');
+        Route::put('availability/{availability}', 'AvailabilityController@update');
+        Route::delete('availability/{availability}', 'AvailabilityController@delete');
+
 });

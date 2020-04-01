@@ -16,7 +16,7 @@ class ServicesController extends Controller
     public function create(Request $request)
     {
         $service = Service::create($request->all());
-        //return csrf_token();
+        
         return response()->json($service);
     }
     public function update(Request $request, $id)

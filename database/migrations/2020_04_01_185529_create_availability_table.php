@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateExclusionsTable extends Migration
+class CreateAvailabilityTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateExclusionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('exclusions', function (Blueprint $table) {
+        Schema::create('availability', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('employee_id');
             $table->char('weekDay',20);
@@ -22,7 +22,8 @@ class CreateExclusionsTable extends Migration
             $table->date('exclusionDate');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
-            $table->foreign('employeesId')->references('id')->on('employees');
+            $table->timestamp('deleted_at')->useCurrent();
+            $table->foreign('employeeId')->references('id')->on('employees');
         });
     }
 
@@ -34,6 +35,6 @@ class CreateExclusionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('exclusions');
+        Schema::dropIfExists('availability');
     }
 }
