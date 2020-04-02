@@ -15,7 +15,7 @@ class CreateAvailabilityTable extends Migration
     {
         Schema::create('availability', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('employee_id');
+            $table->foreign('employee_id');
             $table->char('weekDay',20);
             $table->time('fromTime',0);
             $table->time('toTime',0);
