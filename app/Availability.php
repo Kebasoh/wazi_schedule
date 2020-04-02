@@ -18,7 +18,7 @@ class Availability extends Model
     ];
 
     protected $fillable = [
-        'employeeId',
+        'employee_id',
         'weekDay',
         'fromTime',
         'toTime',

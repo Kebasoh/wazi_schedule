@@ -7,17 +7,32 @@ class AvailabilityController extends Controller
 {
     public function showAllAvailabilities()
     {
-        return response()->json(Availability::all());
+        // return response()->json(Availability::all());
+        $results = app('db')->select("SELECT * FROM availability"); 
+        return response()->json($results);
     }
     public function showOneAvailability($id)
     {
         return response()->json(Availability::find($id));;
     }
-    public function create(Request $request)
-    {
-        $availability = Availability::create($request->all());
+    // public function post(Request $request)
+    // {
+    //     $availability = Availability::post($request->all());
+    //     INSERT ;
         
-        return response()->json($availability);
+    //     return response()->json($availability);
+    // }
+    public function postAvailability(Request $request)
+    {
+        $input = $request->all();
+        $results = app('db')->table('availability')->insert( 
+            array(
+                'employee_id'=>$input["employee_id"]
+            )
+        
+	    );  
+	    return response()->json($results);
+    
     }
     public function update(Request $request, $id)
     {
