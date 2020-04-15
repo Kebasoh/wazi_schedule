@@ -35,10 +35,14 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('appointments/destroy', 'AppointmentsController@massDestroy')->name('appointments.massDestroy');
     Route::resource('appointments', 'AppointmentsController');
 
+    // Availabilities
+    Route::delete('availabilities/destroy', 'AvailabilitiesController@massDestroy')->name('availabilities.massDestroy');
+    Route::resource('availabilities', 'AvailabilitiesController');
+
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
 });
 
-$router->group(['prefix' => 'wazi.com/'], function () use ($router) {
+$router->group(['prefix' => 'api/'], function () use ($router) {
     
         Route::get('appointment', 'AppointmentsController@showAllAppointments');
         Route::get('appointment/{appointment}', 'AppointmentsController@showOneAppointment');

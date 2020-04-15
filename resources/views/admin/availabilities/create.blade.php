@@ -58,7 +58,24 @@
                     {{ trans('cruds.availability.fields.toTime_helper') }}
                 </p>
             </div>
+            <div class="form-group {{ $errors->has('exclusionDate') ? 'has-error' : '' }}">
+                <label for="exclusionDate">{{ trans('cruds.availability.fields.exclusionDate') }}*</label>
+                <input type="text" id="exclusionDate" name="exclusionDate" class="form-control datetime" value="{{ old('exclusionDate', isset($availability) ? $availability->exclusionDate : '') }}" required>
+                @if($errors->has('exclusionDate'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('exclusionDate') }}
+                    </em>
+                @endif
+                <p class="helper-block">
+                    {{ trans('cruds.availability.fields.exclusionDate_helper') }}
+                </p>
+            </div>
+            <div>
+                <input class="btn btn-danger" type="submit" value="{{ trans('global.save') }}">
+            </div>
         </form>
+
+
     </div>
 </div>
 @endsection

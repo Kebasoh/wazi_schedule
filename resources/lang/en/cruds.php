@@ -154,5 +154,25 @@ return [
             'deleted_at'         => 'Deleted at',
             'deleted_at_helper'  => '',
         ],
+        'availability'    => [
+            'title'          => 'Therapist Availability',
+            'title_singular' => 'Availability',
+            'fields'         => [
+                'id'                 => 'ID',
+                'id_helper'          => '',
+                'employee'           => 'Therapist',
+                'employee_helper'    => '',
+                'fromTime'         => 'From Time',
+                'fromTime_helper'  => '',
+                'toTime'         => 'To Time',
+                'toTime_helper' => '',
+                'created_at'         => 'Created at',
+                'created_at_helper'  => '',
+                'updated_at'         => 'Updated at',
+                'updated_at_helper'  => '',
+                'deleted_at'         => 'Deleted at',
+                'deleted_at_helper'  => '',
+            ]
+        ],
     ],
 ];
