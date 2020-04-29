@@ -1,0 +1,64 @@
+@extends('layouts.admin')
+@section('content')
+
+<div class="card">
+    <div class="card-header">
+        {{ trans('global.show') }} {{ trans('cruds.availability.title') }}
+    </div>
+
+    <div class="card-body">
+        <div class="mb-2">
+            <table class="table table-bordered table-striped">
+                <tbody>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.availability.fields.id') }}
+                        </th>
+                        <td>
+                            {{ $availability->id }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.availability.fields.employee') }}
+                        </th>
+                        <td>
+                            {{ $availability->employee->name ?? '' }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.availability.fields.fromTime') }}
+                        </th>
+                        <td>
+                            {{ $availability->fromTime }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.availability.fields.toTime') }}
+                        </th>
+                        <td>
+                            {{ $availability->toTime }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.appointment.fields.exclusionDate') }}
+                        </th>
+                        <td>
+                            {{ $appointment->exclusionDate }}
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <a style="margin-top:20px;" class="btn btn-default" href="{{ url()->previous() }}">
+                {{ trans('global.back_to_list') }}
+            </a>
+        </div>
+
+
+    </div>
+</div>
+@endsection

@@ -92,6 +92,16 @@
                     </a>
                 </li>
             @endcan
+            @can('availability_access')
+                <li class="nav-item">
+                    <a href="{{ route("admin.availabilities.index") }}" class="nav-link {{ request()->is('admin/availabilities') || request()->is('admin/availabilities/*') ? 'active' : '' }}">
+                        <i class="fa fa-clock-o nav-icon">
+
+                        </i>
+                        {{ trans('cruds.availability.title') }}
+                    </a>
+                </li>
+            @endcan
             <li class="nav-item">
                 <a href="{{ route("admin.systemCalendar") }}" class="nav-link {{ request()->is('admin/system-calendar') || request()->is('admin/system-calendar/*') ? 'active' : '' }}">
                     <i class="nav-icon fa-fw fas fa-calendar">
