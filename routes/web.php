@@ -40,6 +40,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('availabilities', 'AvailabilitiesController');
 
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
+    // availability
+    Route::get('events', 'EventController@index')->name('events.index');
+    Route::get('events', 'EventsController@addEvent')->name('events.add');
 });
 
 $router->group(['prefix' => 'api/'], function () use ($router) {

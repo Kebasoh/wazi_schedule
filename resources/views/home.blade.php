@@ -48,7 +48,7 @@
       </div>
     </div>
 
-    <div class="row  last">
+    <div class="row  last mb-5">
       <div class="col-md-2"></div>
 
       <div class="col-md-4 end p-5" style="background-color:#00AACE; ">
